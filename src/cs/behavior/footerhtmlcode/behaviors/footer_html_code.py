@@ -14,15 +14,20 @@ from zope.interface import provider
 class IFooterHTMLCodeMarker(Interface):
     pass
 
+
 @provider(IFormFieldProvider)
 class IFooterHTMLCode(model.Schema):
     """
     """
 
-    project = schema.TextLine(
-        title=_(u'Project'),
-        description=_(u'Give in a project name'),
+    html = schema.Text(
+        title=_(u"Custom HTML code"),
+        description=_(
+            u"Enter your custom HTML code (usualy JS code) that will be shown in the footer of all pages below this folder"
+        ),
+        default=u"",
         required=False,
+        readonly=False,
     )
 
 
@@ -33,11 +38,11 @@ class FooterHTMLCode(object):
         self.context = context
 
     @property
-    def project(self):
-        if hasattr(self.context, 'project'):
-            return self.context.project
+    def html(self):
+        if hasattr(self.context, "html"):
+            return self.context.html
         return None
 
-    @project.setter
-    def project(self, value):
-        self.context.project = value
+    @html.setter
+    def html(self, value):
+        self.context.html = value
