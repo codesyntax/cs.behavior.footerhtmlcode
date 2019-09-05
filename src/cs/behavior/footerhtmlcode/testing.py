@@ -18,12 +18,13 @@ class CsBehaviorFooterhtmlcodeLayer(PloneSandboxLayer):
         # Load any other ZCML that is required for your tests.
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
-        import plone.restapi
-        self.loadZCML(package=plone.restapi)
+        import plone.app.multilingual
+
+        self.loadZCML(package=plone.app.multilingual)
         self.loadZCML(package=cs.behavior.footerhtmlcode)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'cs.behavior.footerhtmlcode:default')
+        applyProfile(portal, "cs.behavior.footerhtmlcode:default")
 
 
 CS_BEHAVIOR_FOOTERHTMLCODE_FIXTURE = CsBehaviorFooterhtmlcodeLayer()
@@ -31,13 +32,13 @@ CS_BEHAVIOR_FOOTERHTMLCODE_FIXTURE = CsBehaviorFooterhtmlcodeLayer()
 
 CS_BEHAVIOR_FOOTERHTMLCODE_INTEGRATION_TESTING = IntegrationTesting(
     bases=(CS_BEHAVIOR_FOOTERHTMLCODE_FIXTURE,),
-    name='CsBehaviorFooterhtmlcodeLayer:IntegrationTesting',
+    name="CsBehaviorFooterhtmlcodeLayer:IntegrationTesting",
 )
 
 
 CS_BEHAVIOR_FOOTERHTMLCODE_FUNCTIONAL_TESTING = FunctionalTesting(
     bases=(CS_BEHAVIOR_FOOTERHTMLCODE_FIXTURE,),
-    name='CsBehaviorFooterhtmlcodeLayer:FunctionalTesting',
+    name="CsBehaviorFooterhtmlcodeLayer:FunctionalTesting",
 )
 
 
@@ -47,5 +48,5 @@ CS_BEHAVIOR_FOOTERHTMLCODE_ACCEPTANCE_TESTING = FunctionalTesting(
         REMOTE_LIBRARY_BUNDLE_FIXTURE,
         z2.ZSERVER_FIXTURE,
     ),
-    name='CsBehaviorFooterhtmlcodeLayer:AcceptanceTesting',
+    name="CsBehaviorFooterhtmlcodeLayer:AcceptanceTesting",
 )
