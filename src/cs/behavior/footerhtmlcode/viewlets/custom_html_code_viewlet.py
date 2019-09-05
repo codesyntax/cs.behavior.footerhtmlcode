@@ -19,9 +19,10 @@ class CustomHTMLCodeViewlet(ViewletBase):
 
     def get_parent_lrf(self):
         navigation_root = self.context
-        while not ILanguageRootFolder.providedBy(
-            navigation_root
-        ) or not IPloneSiteRoot.providedBy(navigation_root):
+        while not (
+            ILanguageRootFolder.providedBy(navigation_root)
+            or IPloneSiteRoot.providedBy(navigation_root)
+        ):
             navigation_root = api.portal.get_navigation_root(navigation_root)
 
         if ILanguageRootFolder.providedBy(navigation_root):
