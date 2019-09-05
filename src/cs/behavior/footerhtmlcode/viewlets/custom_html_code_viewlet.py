@@ -3,6 +3,7 @@
 from plone import api
 from plone.app.layout.viewlets import ViewletBase
 from plone.app.multilingual.interfaces import ILanguageRootFolder
+from Products.CMFPlone.interfaces import IPloneSiteRoot
 
 
 class CustomHTMLCodeViewlet(ViewletBase):
