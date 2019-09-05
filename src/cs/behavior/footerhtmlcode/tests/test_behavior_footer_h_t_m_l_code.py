@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-from cs.behavior.footerhtmlcode.behaviors.footer_h_t_m_l_code import (
-    IFooterHTMLCodeMarker,
-)
+from cs.behavior.footerhtmlcode.behaviors.footer_html_code import IFooterHTMLCodeMarker
 from cs.behavior.footerhtmlcode.testing import (
     CS_BEHAVIOR_FOOTERHTMLCODE_INTEGRATION_TESTING,
 )  # noqa
@@ -23,7 +21,5 @@ class FooterHTMLCodeIntegrationTest(unittest.TestCase):
         setRoles(self.portal, TEST_USER_ID, ["Manager"])
 
     def test_behavior_footer_h_t_m_l_code(self):
-        behavior = getUtility(
-            IBehavior, "cs.behavior.footerhtmlcode.footer_h_t_m_l_code"
-        )
+        behavior = getUtility(IBehavior, "cs.behavior.footerhtmlcode.footer_html_code")
         self.assertEqual(behavior.marker, IFooterHTMLCodeMarker)
