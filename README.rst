@@ -1,7 +1,3 @@
-.. This README is meant for consumption by humans and pypi. Pypi can render rst files so please do not use Sphinx features.
-   If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
-   This text does not appear on pypi or github. It is a comment.
-
 ==========================
 cs.behavior.footerhtmlcode
 ==========================
@@ -45,16 +41,14 @@ Install the product in the Plone Control Panel -> Addons. The install process wi
 Contribute
 ----------
 
-- Issue Tracker: https://github.com/collective/cs.behavior.footerhtmlcode/issues
-- Source Code: https://github.com/collective/cs.behavior.footerhtmlcode
-- Documentation: https://docs.plone.org/foo/bar
+- Issue Tracker: https://github.com/codesyntax/cs.behavior.footerhtmlcode/issues
+- Source Code: https://github.com/codesyntax/cs.behavior.footerhtmlcode
 
 
 Support
 -------
 
-If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
+If you are having issues, please let us know using the `GitHub issue tracker`_
 
 
 License
@@ -63,3 +57,4 @@ License
 The project is licensed under the GPLv2.
 
 .. _`Cookie Consent`: https://cookieconsent.osano.com/
+.. _`GitHub issue tracker`: https://github.com/codesyntax/cs.behavior.footerhtmlcode/issues
