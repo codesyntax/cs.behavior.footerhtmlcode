@@ -4,7 +4,7 @@ from plone import api
 from plone.app.layout.viewlets import ViewletBase
 from plone.app.multilingual.interfaces import ILanguageRootFolder
 from Products.CMFPlone.interfaces import IPloneSiteRoot
-
+from Acquisition import aq_parent
 
 class CustomHTMLCodeViewlet(ViewletBase):
     def update(self):
@@ -23,7 +23,7 @@ class CustomHTMLCodeViewlet(ViewletBase):
             ILanguageRootFolder.providedBy(navigation_root)
             or IPloneSiteRoot.providedBy(navigation_root)
         ):
-            navigation_root = api.portal.get_navigation_root(navigation_root)
+            navigation_root = aq_parent(navigation_root)
 
         if ILanguageRootFolder.providedBy(navigation_root):
             return navigation_root
