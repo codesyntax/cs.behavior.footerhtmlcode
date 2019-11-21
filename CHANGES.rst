@@ -5,7 +5,8 @@ Changelog
 1.0a3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Avoid infitine loops.
+  [erral]
 
 
 1.0a2 (2019-09-12)
