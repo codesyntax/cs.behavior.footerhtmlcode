@@ -16,7 +16,7 @@ long_description = "\n\n".join(
 
 setup(
     name="cs.behavior.footerhtmlcode",
-    version="1.0",
+    version="1.1.dev0",
     description="An add-on providing a behavior that allows entering arbitrary HTML code to be shown in a portlet in LRF objects",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
