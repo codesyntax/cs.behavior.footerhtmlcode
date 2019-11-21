@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
-
-from plone import api
 from plone.app.layout.viewlets import ViewletBase
 from plone.app.multilingual.interfaces import ILanguageRootFolder
 from Products.CMFPlone.interfaces import IPloneSiteRoot
 from Acquisition import aq_parent
+
 
 class CustomHTMLCodeViewlet(ViewletBase):
     def update(self):
