@@ -5,7 +5,8 @@ Changelog
 1.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Fix flake8.
+  [erral]
 
 
 1.0 (2019-11-21)
