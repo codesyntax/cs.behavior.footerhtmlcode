@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.1 (unreleased)
+1.1 (2026-04-23)
 ----------------
 
 - Remove python version restriction
