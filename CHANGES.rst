@@ -5,7 +5,8 @@ Changelog
 1.1 (unreleased)
 ----------------
 
-- Nothing changed yet.
+- Remove python version restriction
+  [erral]
 
 
 1.0.1 (2019-11-21)
